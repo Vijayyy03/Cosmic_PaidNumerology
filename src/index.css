@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* ===== ANCIENT VEDIC THEME ===== */
+:root {
+  /* Primary Vedic Palette */
+  --color-maroon-deep: #4a1c1c;
+  --color-maroon: #6b2d2d;
+  --color-maroon-light: #8b3a3a;
+  --color-cream: #f5f0e1;
+  --color-cream-dark: #e8e0c9;
+  --color-parchment: #faf6eb;
+
+  /* Gold Accents */
+  --color-gold: #c9a227;
+  --color-gold-bright: #d4af37;
+  --color-gold-pale: #e8d48b;
+  --color-gold-dark: #a68a1f;
+
+  /* Warm Accents */
+  --color-orange: #d4712a;
+  --color-orange-burnt: #b85c1c;
+  --color-terracotta: #c75d3a;
+
+  /* Gradients */
+  --gradient-header: linear-gradient(90deg, #4a1c1c 0%, #6b2d2d 50%, #4a1c1c 100%);
+  --gradient-hero: linear-gradient(180deg, #4a1c1c 0%, #3d1717 50%, #2d1010 100%);
+  --gradient-section-light: linear-gradient(180deg, #f5f0e1 0%, #e8e0c9 100%);
+  --gradient-section-dark: linear-gradient(180deg, #4a1c1c 0%, #3d1717 100%);
+  --gradient-gold: linear-gradient(135deg, #c9a227 0%, #d4af37 50%, #c9a227 100%);
+
+  /* Card Styles */
+  --card-light: rgba(245, 240, 225, 0.95);
+  --card-dark: rgba(74, 28, 28, 0.9);
+
+  /* Text Colors */
+  --text-dark: #2d1010;
+  --text-light: #f5f0e1;
+  --text-muted-dark: #5a3a3a;
+  --text-muted-light: #d4c8b0;
+
+  /* Border Colors */
+  --border-gold: rgba(201, 162, 39, 0.5);
+  --border-maroon: rgba(107, 45, 45, 0.3);
+
+  /* Shadows */
+  --shadow-gold: 0 4px 20px rgba(201, 162, 39, 0.25);
+  --shadow-dark: 0 4px 20px rgba(45, 16, 16, 0.3);
+
+  /* Fonts */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* ===== BASE STYLES ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== HEADINGS ===== */
+.heading-vedic {
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+}
+
+/* ===== BACKGROUNDS ===== */
+.bg-header {
+  background: var(--gradient-header);
+}
+
+.bg-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-section-light {
+  background: var(--gradient-section-light);
+}
+
+.bg-section-dark {
+  background: var(--gradient-section-dark);
+}
+
+.bg-cream {
+  background: var(--color-cream);
+}
+
+.bg-maroon {
+  background: var(--color-maroon-deep);
+}
+
+/* ===== DECORATIVE BORDER ===== */
+.ornate-border {
+  position: relative;
+  border: 2px solid var(--color-gold);
+  padding: 2rem;
+}
+
+.ornate-border::before,
+.ornate-border::after {
+  content: '❖';
+  position: absolute;
+  color: var(--color-gold);
+  font-size: 1rem;
+}
+
+.ornate-border::before {
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: inherit;
+  padding: 0 0.5rem;
+}
+
+.ornate-border::after {
+  bottom: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: inherit;
+  padding: 0 0.5rem;
+}
+
+/* ===== CARDS ===== */
+.vedic-card-light {
+  background: var(--card-light);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow-dark);
+}
+
+.vedic-card-dark {
+  background: var(--card-dark);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 2rem;
+  color: var(--text-light);
+}
+
+.vedic-card-gold {
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, rgba(201, 162, 39, 0.05) 100%);
+  border: 2px solid var(--color-gold);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn-gold {
+  background: var(--gradient-gold);
+  color: var(--text-dark);
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-gold-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(201, 162, 39, 0.4);
+}
+
+.btn-maroon {
+  background: var(--color-maroon);
+  color: var(--text-light);
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-maroon:hover {
+  background: var(--color-maroon-light);
+  box-shadow: var(--shadow-dark);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--color-gold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: 2px solid var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: var(--color-gold);
+  color: var(--text-dark);
+}
+
+/* ===== TEXT COLORS ===== */
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-maroon {
+  color: var(--color-maroon);
+}
+
+.text-cream {
+  color: var(--color-cream);
+}
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+.divider-vedic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.divider-vedic::before,
+.divider-vedic::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.divider-vedic-dark::before,
+.divider-vedic-dark::after {
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.sanskrit-accent {
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  letter-spacing: 0.3em;
+  opacity: 0.8;
+}
+
+.om-symbol {
+  font-size: 1.5rem;
+  color: var(--color-gold);
+}
+
+/* ===== MANDALA PATTERN (CSS) ===== */
+.mandala-bg {
+  position: relative;
+}
+
+.mandala-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, transparent 30%, rgba(201, 162, 39, 0.03) 31%, rgba(201, 162, 39, 0.03) 32%, transparent 33%),
+    radial-gradient(circle, transparent 50%, rgba(201, 162, 39, 0.03) 51%, rgba(201, 162, 39, 0.03) 52%, transparent 53%),
+    radial-gradient(circle, transparent 70%, rgba(201, 162, 39, 0.03) 71%, rgba(201, 162, 39, 0.03) 72%, transparent 73%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-maroon);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-maroon-light);
+}
+
+/* ===== UTILITY ===== */
+.container-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== IMAGE STYLES ===== */
+.image-vedic {
+  border: 3px solid var(--color-gold);
+  border-radius: 8px;
+  box-shadow: var(--shadow-dark);
+}
+
+/* ===== FORM STYLES ===== */
+.form-input-vedic {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: white;
+  border: 1px solid var(--border-maroon);
+  border-radius: 6px;
+  color: var(--text-dark);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input-vedic::placeholder {
+  color: var(--text-muted-dark);
+}
+
+.form-input-vedic:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
+}
+
+/* ===== CONSTELLATION (kept for compatibility) ===== */
+.constellation-bg {
+  display: none;
+}
