@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    server_name numerology.shivcosmic.com;
+    root /var/www/numerology_frontend;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
