@@ -43,7 +43,7 @@ const RefundPolicy = () => {
                         <div>
                             <h2 className="heading-vedic text-xl font-bold text-maroon mb-4">1. Overview</h2>
                             <p className="text-[var(--text-muted-dark)] text-sm leading-relaxed">
-                                At Shiv Cosmic Energy Solutions, we strive to provide the highest quality Vedic Numerology reports and ensure customer satisfaction. This Refund Policy outlines the circumstances under which refunds may be issued for our digital products and services. By purchasing our services, you acknowledge that you have read, understood, and agree to be bound by this Refund Policy.
+                                At Shiv Cosmic Energy Solutions, we strive to provide the highest quality Professional Numerology reports and ensure customer satisfaction. This Refund Policy outlines the circumstances under which refunds may be issued for our digital products and services. By purchasing our services, you acknowledge that you have read, understood, and agree to be bound by this Refund Policy.
                             </p>
                         </div>
 

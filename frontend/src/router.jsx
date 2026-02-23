@@ -11,6 +11,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsConditions = lazy(() => import('./pages/TermsConditions'));
 const RefundPolicy = lazy(() => import('./pages/RefundPolicy'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const ComingSoon = lazy(() => import('./pages/ComingSoon'));
 
 // Suspense Wrapper
 const Loadable = (Component) => (
@@ -57,5 +58,9 @@ export const router = createBrowserRouter([
     {
         path: '/refund-policy',
         element: Loadable(RefundPolicy)
+    },
+    {
+        path: '/coming-soon',
+        element: Loadable(ComingSoon)
     }
 ]);

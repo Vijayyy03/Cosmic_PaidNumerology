@@ -50,7 +50,7 @@ const TermsConditions = () => {
                         <div>
                             <h2 className="heading-vedic text-xl font-bold text-maroon mb-4">2. Description of Service</h2>
                             <p className="text-[var(--text-muted-dark)] text-sm leading-relaxed">
-                                Shiv Cosmic provides digital Vedic Numerology reports generated based on user-provided birth details. Our Service uses ancient Vedic numerology principles combined with modern technology to create personalized reports in multiple languages (English, Hindi, and Marathi). Reports are generated instantly as downloadable PDF documents.
+                                Shiv Cosmic provides digital Professional Numerology reports generated based on user-provided birth details. Our Service uses ancient Vedic numerology principles combined with modern technology to create personalized reports in multiple languages (English, Hindi, and Marathi). Reports are generated instantly as downloadable PDF documents.
                             </p>
                         </div>
 

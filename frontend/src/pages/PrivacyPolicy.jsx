@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
                                 We use the information we collect for the following purposes:
                             </p>
                             <ul className="list-disc pl-6 space-y-2 text-[var(--text-muted-dark)] text-sm">
-                                <li><strong>Report Generation:</strong> Your birth date and name are used to calculate and generate your personalized Vedic Numerology report.</li>
+                                <li><strong>Report Generation:</strong> Your birth date and name are used to calculate and generate your personalized Professional Numerology report.</li>
                                 <li><strong>Communication:</strong> Your email and phone number may be used to deliver your report and send service-related notifications.</li>
                                 <li><strong>Service Improvement:</strong> Aggregated, anonymized data helps us improve our platform and user experience.</li>
                                 <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes.</li>

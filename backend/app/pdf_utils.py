@@ -90,60 +90,72 @@ def generate_cover_page(name: str, dob: str) -> io.BytesIO:
         c.setFillColorRGB(0.1, 0, 0) # Dark Red/Black
         c.rect(0, 0, width, height, fill=1)
         
-    # Draw Text
-    c.setFillColor(colors.white)
-    
-    # --- Name & DOB with Drop Shadow ---
-    # Shadow Offset
+    # Draw Text overlay panel — dark semi-transparent box behind text for readability
+    panel_x = width * 0.08
+    panel_y = 470
+    panel_w = width * 0.84
+    panel_h = 185
+    c.setFillColor(colors.Color(0, 0, 0, alpha=0.55))
+    c.roundRect(panel_x, panel_y, panel_w, panel_h, radius=10, fill=1, stroke=0)
+
     shadow_offset_x = 2
     shadow_offset_y = -2
-    shadow_color = colors.Color(0, 0, 0, alpha=0.8)
-    
-    # Select Fonts
+    shadow_color = colors.Color(0, 0, 0, alpha=0.95)
+
     name_font = get_font_for_text(name, SERIF_FONT)
     print(f"[DEBUG] Using font '{name_font}' for Name: {name}")
-    
-    # 1. Name Shadow
-    c.setFont(name_font, 46) 
+
+    # Brand line — gold small caps
+    c.setFont(DEFAULT_FONT, 11)
+    c.setFillColorRGB(0.83, 0.68, 0.21)
+    c.drawCentredString(width / 2, 638, "SHIV COSMIC ENERGY SOLUTIONS")
+
+    # Main title — white with strong shadow
+    c.setFont(name_font, 34)
     c.setFillColor(shadow_color)
-    c.drawCentredString(width / 2 + shadow_offset_x, 550 + shadow_offset_y, name)
-    
-    # 2. Name Main (Gold)
-    c.setFillColorRGB(0.83, 0.68, 0.21) # Deep Gold
-    c.drawCentredString(width / 2, 550, name)
-    
-    # Formatted DOB (Force English Month)
+    c.drawCentredString(width / 2 + shadow_offset_x, 600 + shadow_offset_y, "Professional Numerology Report")
+    c.setFillColor(colors.white)
+    c.drawCentredString(width / 2, 600, "Professional Numerology Report")
+
+    # Thin gold divider line
+    c.setStrokeColorRGB(0.83, 0.68, 0.21)
+    c.setLineWidth(0.8)
+    c.line(panel_x + 20, 588, panel_x + panel_w - 20, 588)
+
+    # "Personalised for: [Name]" — gold
+    personalised_text = f"Personalised for:  {name}"
+    c.setFont(DEFAULT_FONT, 16)
+    c.setFillColor(shadow_color)
+    c.drawCentredString(width / 2 + shadow_offset_x, 560 + shadow_offset_y, personalised_text)
+    c.setFillColorRGB(0.95, 0.85, 0.55)  # Warm gold
+    c.drawCentredString(width / 2, 560, personalised_text)
+
+    # DOB line — light grey
     formatted_dob = dob
     try:
         dt = datetime.strptime(dob, "%d-%m-%Y")
-        # Manual mapping to avoid system locale issues (e.g., Hindi/Marathi months)
-        months = ["January", "February", "March", "April", "May", "June", 
+        months = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"]
-        month_name = months[dt.month - 1]
-        formatted_dob = f"{dt.day} {month_name}, {dt.year}"
+        formatted_dob = f"{dt.day} {months[dt.month - 1]}, {dt.year}"
     except:
         pass
 
-    # Select Font for DOB (Guaranteed English now)
-    dob_font = DEFAULT_FONT # Always use Helvetica for date as per user request
-    
-    # 3. DOB Shadow
-    c.setFont(dob_font, 20) 
+    c.setFont(DEFAULT_FONT, 13)
     c.setFillColor(shadow_color)
-    c.drawCentredString(width / 2 + shadow_offset_x, 500 + shadow_offset_y, formatted_dob)
-    
-    # 4. DOB Main (White)
-    c.setFillColor(colors.white)
-    c.drawCentredString(width / 2, 500, formatted_dob)
-    
-    # Footer / Branding
-    c.setFont(DEFAULT_FONT, 16) 
-    c.setFillColor(colors.lightgrey)
+    c.drawCentredString(width / 2 + shadow_offset_x, 527 + shadow_offset_y, formatted_dob)
+    c.setFillColorRGB(0.85, 0.85, 0.85)
+    c.drawCentredString(width / 2, 527, formatted_dob)
+
+    # Footer
+    c.setFont(DEFAULT_FONT, 12)
+    c.setFillColorRGB(0.85, 0.85, 0.85)
     c.drawCentredString(width / 2, 50, "www.shivcosmic.com")
 
     c.save()
     packet.seek(0)
     return packet
+
+
 
 def generate_end_page() -> io.BytesIO:
     """
@@ -209,13 +221,14 @@ async def merge_report_with_branding(report_url: str, name: str, dob: str) -> io
             report_stream = io.BytesIO(response.content)
             report_pdf = PdfReader(report_stream)
             
-            # Exclude the last 4 pages (Ads/Upsells)
-            # Assuming the reported ads are always at the end.
+            # Skip page 1 (AstrologyAPI's own cover with "Vedic Numerology Report")
+            # and exclude the last 4 pages (Ads/Upsells)
+            start_page = 1
             pages_to_keep = len(report_pdf.pages) - 4
-            if pages_to_keep < 1:
-                pages_to_keep = len(report_pdf.pages) # Safety: don't remove everything if report is short
-                
-            for i in range(pages_to_keep):
+            if pages_to_keep <= start_page:
+                pages_to_keep = len(report_pdf.pages) # Safety fallback
+
+            for i in range(start_page, pages_to_keep):
                 writer.add_page(report_pdf.pages[i])
                 
         # 3. Generate and Add End Page
