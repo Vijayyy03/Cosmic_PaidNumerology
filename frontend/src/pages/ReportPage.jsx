@@ -136,7 +136,7 @@ const ReportPage = () => {
                     {pdfUrl && (
                         <div className="flex flex-col items-center w-full h-full">
                             <div className="text-center mb-8 animate-slide-up">
-                                <div className="sanskrit-accent mb-3 text-xl">॥ श्री गणेशाय नमः ॥</div>
+                                <div className="sanskrit-accent mb-3 text-xl">॥ ॐ नमः शिवाय ॥</div>
                                 <h1 className="heading-vedic text-3xl md:text-4xl font-bold mb-2 text-maroon">
                                     {formData.name}'s <span className="text-gold">Cosmic Chart</span>
                                 </h1>

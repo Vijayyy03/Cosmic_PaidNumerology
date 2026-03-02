@@ -104,12 +104,12 @@ const LandingPage = () => {
 
     const faqs = [
         {
-            question: "What is Vedic Numerology?",
-            answer: "Vedic Numerology is an ancient system from India that interprets the cosmic energy of numbers based on your birth date. Unlike Western numerology, it closely integrates with planetary influences to provide deep insights into your soul's purpose and destiny."
+            question: "What is Numerology?",
+            answer: "Numerology is an ancient system that interprets the cosmic energy of numbers based on your birth date. It closely integrates with planetary influences to provide deep insights into your soul's purpose and destiny."
         },
         {
             question: "How is this different from Western Numerology?",
-            answer: "While both systems analyze numbers, Vedic Numerology places greater emphasis on the 'Psychic' (Birthday) and 'Destiny' (Life Path) numbers and their relationship with the nine planets (Navagraha), offering a more karmic and spiritual perspective."
+            answer: "While both systems analyze numbers, this system places greater emphasis on the 'Psychic' (Birthday) and 'Destiny' (Life Path) numbers and their relationship with the nine planets (Navagraha), offering a more karmic and spiritual perspective."
         },
         {
             question: "What information do I need to provide?",
@@ -128,8 +128,8 @@ const LandingPage = () => {
             answer: "We currently offer reports in English, Hindi (हिन्दी), and Marathi (मराठी). You can select your preferred language while filling in your details."
         },
         {
-            question: "How accurate is Vedic Numerology?",
-            answer: "Vedic Numerology has been practiced for thousands of years and is deeply rooted in the mathematical patterns of the universe. While results are based on ancient Vedic principles and planetary influences, the insights should be used as guidance rather than absolute predictions."
+            question: "How accurate is Numerology?",
+            answer: "Numerology has been practiced for thousands of years and is deeply rooted in the mathematical patterns of the universe. While results are based on ancient principles and planetary influences, the insights should be used as guidance rather than absolute predictions."
         },
         {
             question: "Can I generate reports for my family members?",
@@ -169,7 +169,7 @@ const LandingPage = () => {
         {
             step: "03",
             title: "Reveal",
-            description: "Receive your comprehensive Vedic report."
+            description: "Receive your comprehensive Numerology report."
         }
     ];
 
@@ -296,55 +296,36 @@ const LandingPage = () => {
                     <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                         {/* Left Content */}
                         <div className="relative z-10">
-                            <div className="sanskrit-accent mb-4 text-xs md:text-sm tracking-wide text-[var(--color-gold)] opacity-90">॥ श्री गणेशाय नमः ॥</div>
+                            <div className="sanskrit-accent mb-4 text-xs md:text-sm tracking-wide text-[var(--color-gold)] opacity-90">॥ ॐ नमः शिवाय ॥</div>
 
-                            <h1 className="heading-vedic text-3xl md:text-5xl font-bold text-[var(--color-cream)] mb-6 leading-tight drop-shadow-lg md:drop-shadow-none">
-                                Discover Your
-                                <span className="text-gold-foil block mt-1">Cosmic Destiny</span>
-                                Through Numbers
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--color-cream)] mb-6 leading-tight font-heading drop-shadow-lg">
+                                Reveal the
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffe58f] via-[#d4af37] to-[#aa7c11] block mt-1 drop-shadow-md">
+                                    Hidden Blueprint
+                                </span>
+                                of Your Life
                             </h1>
 
-                            <p className="text-[var(--text-muted-light)] mb-8 leading-relaxed">
-                                Unlock the ancient wisdom of Vedic Numerology. Your birth date holds the secrets to your personality, relationships, career, and life purpose.
+                            <p className="text-lg md:text-xl text-[var(--text-muted-light)] mb-8 max-w-xl leading-relaxed font-light opacity-90">
+                                Stop guessing. Uncover the exact path you were meant to walk with a <strong className="text-gold font-medium tracking-wide">100+ page premium personalized reading</strong> detailing your career, relationships, and ultimate destiny.
                             </p>
 
                             <div className="flex flex-wrap gap-4 mb-8">
-                                <div className="relative group">
-                                    {/* Animated outer ping ring — same as sticky bar */}
-                                    <div className="absolute inset-0 rounded animate-ping opacity-40" style={{ background: 'transparent', border: '2px solid #f0c940' }}></div>
-                                    <button
-                                        onClick={() => navigate('/numerology-form')}
-                                        className="btn-gold relative z-10"
-                                    >
-                                        🔥 Get Your Report Now
-                                    </button>
-                                </div>
 
-                                {/* Click Here — mobile only, points UP at the gold button above */}
-                                <div className="md:hidden flex items-center gap-3 pointer-events-none select-none">
-                                    <div className="flex flex-col items-center animate-bounce">
-                                        <svg width="18" height="48" viewBox="0 0 18 52" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                            style={{ filter: 'drop-shadow(0 0 6px rgba(201,162,39,0.8))' }}>
-                                            <line x1="9" y1="50" x2="9" y2="14" stroke="#d4af37" strokeWidth="1.5" strokeLinecap="round" />
-                                            <path d="M2 22 L9 6 L16 22" stroke="#d4af37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                                            <circle cx="9" cy="50" r="2" fill="#d4af37" opacity="0.7" />
-                                        </svg>
-                                    </div>
-                                    <span style={{
-                                        fontFamily: "'Italianno', cursive",
-                                        fontSize: '2.4rem',
-                                        lineHeight: '1',
-                                        color: '#e8c84a',
-                                        textShadow: '0 0 16px rgba(212,175,55,0.7), 0 2px 4px rgba(0,0,0,0.3)'
-                                    }}>
-                                        Click Here
-                                    </span>
-                                </div>
+                                <button onClick={() => navigate('/numerology-form')} className="btn-gold">
 
-                                <button onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth' })} className="btn-outline-gold hover:bg-[rgba(201,162,39,0.1)]">
-                                    Learn More
+                                    🔥 Get Your Report Now
+
                                 </button>
+
+                                <button onClick={() => document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' })} className="btn-outline-gold hover:bg-[rgba(201,162,39,0.1)]">
+
+                                    Learn More
+
+                                </button>
+
                             </div>
+
 
                             {/* Click Here — desktop only, shown above stats */}
                             <div className="hidden md:flex items-center gap-4 mb-6 pointer-events-none select-none">
@@ -419,22 +400,58 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
+            </section >
+
+            {/* Report Cards — infinite right-to-left marquee */}
+            <section className="bg-cream py-16 overflow-hidden">
+                <div className="container-main mb-8">
+                    <div className="text-center">
+                        <h2 className="heading-vedic text-2xl md:text-3xl font-bold text-maroon mb-2">
+                            What You'll Get In Your <span className="text-gold">Report 2026</span>
+                        </h2>
+                        <div className="divider-vedic"><span className="text-gold">❖</span></div>
+                    </div>
+                </div>
+
+                <div className="relative w-full">
+                    {/* Fade edges */}
+                    <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 z-10 bg-gradient-to-r from-[#f5f0e1] to-transparent pointer-events-none" />
+                    <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 z-10 bg-gradient-to-l from-[#f5f0e1] to-transparent pointer-events-none" />
+
+                    <div className="flex gap-6 md:gap-8 w-max animate-marquee-cards">
+                        {[
+                            '/images/cards/Love-Relationship.png',
+                            '/images/cards/Money-Career.png',
+                            '/images/cards/Health.png',
+                            '/images/cards/Talents.png',
+                            '/images/cards/Potential-Challenges.png',
+                            /* duplicate for seamless loop */
+                            '/images/cards/Love-Relationship.png',
+                            '/images/cards/Money-Career.png',
+                            '/images/cards/Health.png',
+                            '/images/cards/Talents.png',
+                            '/images/cards/Potential-Challenges.png',
+                        ].map((src, i) => (
+                            <div key={i} className="flex-shrink-0 w-72 md:w-[28rem] rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-[rgba(201,162,39,0.18)] shadow-[0_6px_24px_rgba(107,45,45,0.08)] hover:shadow-[0_12px_36px_rgba(201,162,39,0.18)] hover:-translate-y-2 transition-all duration-400 cursor-pointer" onClick={() => navigate('/numerology-form')}>
+                                <img src={src} alt="Report chapter" className="w-full h-auto object-contain mix-blend-multiply" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
 
+
             {/* How It Works */}
-            <section id="how-it-works" className="bg-cream py-20 px-4">
+            < section id="how-it-works" className="bg-section-dark py-20 px-4" >
                 <div className="container-main">
                     {/* Section Header */}
                     <div className="text-center mb-14">
-                        <h2 className="heading-vedic text-3xl md:text-4xl font-bold text-maroon mb-3">
+                        <h2 className="heading-vedic text-3xl md:text-4xl font-bold text-[var(--color-cream)] mb-3">
                             How It <span className="text-gold">Works</span>
                         </h2>
                         <div className="divider-vedic">
                             <span className="text-gold">❖</span>
                         </div>
-                        <p className="text-[var(--text-muted-dark)] mt-4 max-w-lg mx-auto text-sm">
-                            Get your personalized Professional Numerology report in three simple steps
-                        </p>
                     </div>
 
                     {/* Step Cards with Connectors */}
@@ -506,42 +523,44 @@ const LandingPage = () => {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* How Does Numerology Work? */}
-            <section className="bg-section-dark py-20 px-4 relative overflow-hidden">
+            < section className="bg-cream py-20 px-4 relative overflow-hidden" >
                 {/* Floating background numbers — particle field */}
-                <div className="absolute inset-0 pointer-events-none select-none overflow-hidden" aria-hidden="true">
-                    {[
-                        { n: '1', top: '8%', left: '4%', size: '5rem', op: 0.04, delay: '0s' },
-                        { n: '9', top: '15%', left: '88%', size: '7rem', op: 0.05, delay: '1.2s' },
-                        { n: '3', top: '70%', left: '6%', size: '6rem', op: 0.04, delay: '2.5s' },
-                        { n: '7', top: '80%', left: '85%', size: '8rem', op: 0.05, delay: '0.8s' },
-                        { n: '5', top: '45%', left: '1%', size: '4rem', op: 0.03, delay: '3.1s' },
-                        { n: '2', top: '50%', left: '92%', size: '5rem', op: 0.04, delay: '1.8s' },
-                        { n: '8', top: '25%', left: '50%', size: '9rem', op: 0.03, delay: '2.0s' },
-                        { n: '4', top: '88%', left: '45%', size: '5rem', op: 0.04, delay: '0.4s' },
-                        { n: '6', top: '5%', left: '60%', size: '4rem', op: 0.03, delay: '3.5s' },
-                    ].map(({ n, top, left, size, op, delay }) => (
-                        <span key={n + top} style={{
-                            position: 'absolute', top, left,
-                            fontSize: size, opacity: op,
-                            color: '#d4af37',
-                            fontFamily: "'Cinzel', serif",
-                            fontWeight: 700,
-                            animation: `float-num 8s ease-in-out infinite`,
-                            animationDelay: delay,
-                        }}>{n}</span>
-                    ))}
-                </div>
+                < div className="absolute inset-0 pointer-events-none select-none overflow-hidden" aria-hidden="true" >
+                    {
+                        [
+                            { n: '1', top: '8%', left: '4%', size: '5rem', op: 0.04, delay: '0s' },
+                            { n: '9', top: '15%', left: '88%', size: '7rem', op: 0.05, delay: '1.2s' },
+                            { n: '3', top: '70%', left: '6%', size: '6rem', op: 0.04, delay: '2.5s' },
+                            { n: '7', top: '80%', left: '85%', size: '8rem', op: 0.05, delay: '0.8s' },
+                            { n: '5', top: '45%', left: '1%', size: '4rem', op: 0.03, delay: '3.1s' },
+                            { n: '2', top: '50%', left: '92%', size: '5rem', op: 0.04, delay: '1.8s' },
+                            { n: '8', top: '25%', left: '50%', size: '9rem', op: 0.03, delay: '2.0s' },
+                            { n: '4', top: '88%', left: '45%', size: '5rem', op: 0.04, delay: '0.4s' },
+                            { n: '6', top: '5%', left: '60%', size: '4rem', op: 0.03, delay: '3.5s' },
+                        ].map(({ n, top, left, size, op, delay }) => (
+                            <span key={n + top} style={{
+                                position: 'absolute', top, left,
+                                fontSize: size, opacity: op,
+                                color: '#d4af37',
+                                fontFamily: "'Cinzel', serif",
+                                fontWeight: 700,
+                                animation: `float-num 8s ease-in-out infinite`,
+                                animationDelay: delay,
+                            }}>{n}</span>
+                        ))
+                    }
+                </div >
 
                 <div className="container-main relative z-10">
                     <div className="grid md:grid-cols-5 gap-12 items-start">
 
                         {/* Left Content - 3 cols */}
                         <div className="md:col-span-3">
-                            <div className="sanskrit-accent mb-2">अंकशास्त्र</div>
-                            <h2 className="heading-vedic text-3xl md:text-4xl font-bold text-[var(--color-cream)] mb-3 leading-tight">
+                            <div className="sanskrit-accent mb-2 text-maroon">अंकशास्त्र</div>
+                            <h2 className="heading-vedic text-3xl md:text-4xl font-bold text-maroon mb-3 leading-tight">
                                 How does Numerology <span className="text-gold">Work?</span>
                             </h2>
                             <div className="w-20 h-0.5 bg-gradient-to-r from-[var(--color-gold)] to-transparent mb-8"></div>
@@ -579,13 +598,13 @@ const LandingPage = () => {
                                         <div className="flex-1">
                                             <div className="flex flex-wrap items-center gap-2 mb-1">
                                                 <span className="text-base">{icon}</span>
-                                                <h3 className="text-[var(--color-cream)] font-semibold text-sm md:text-base">{title}</h3>
+                                                <h3 className="text-maroon font-semibold text-sm md:text-base">{title}</h3>
                                                 {/* Pill badge */}
                                                 <span className="text-[10px] px-2 py-0.5 rounded-full border border-[rgba(201,162,39,0.4)] text-gold opacity-80" style={{ fontFamily: "'Cinzel',serif", letterSpacing: '0.1em' }}>
                                                     {badge}
                                                 </span>
                                             </div>
-                                            <p className="text-[var(--text-muted-light)] text-sm leading-relaxed">{desc}</p>
+                                            <p className="text-[var(--text-muted-dark)] text-sm leading-relaxed">{desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -677,40 +696,8 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            {/* What is & Why Numerology Section */}
-            <section id="features" className="py-20 px-4 bg-cream relative">
-                <div className="container-main">
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {/* Card 1: What is Numerology? */}
-                        <div className="vedic-card-light p-8 md:p-10 relative overflow-hidden group shadow-[0_4px_15px_rgba(201,162,39,0.1)] md:shadow-none hover:shadow-[0_4px_20px_rgba(201,162,39,0.3)] transition-all duration-300 border border-[rgba(201,162,39,0.15)] md:border-transparent">
-                            {/* Background accent */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-[rgba(201,162,39,0.15)] rounded-full blur-3xl -mr-10 -mt-10"></div>
-
-                            <h3 className="heading-vedic text-2xl md:text-3xl font-bold text-maroon mb-6 text-center">
-                                What is Numerology?
-                            </h3>
-                            <p className="text-[var(--text-muted-dark)] leading-relaxed text-sm md:text-base text-left md:text-justify">
-                                The word, "numerology," is the science of numbers. The Numerology word comes from the Latin root, "numerus," which means number and the Greek word, "logos," which refers word or thought. These number-thoughts, or numerology is an ancient method of divination where numerical vibrations are charted in order to determine or predict the pattern of trends for the future.
-                            </p>
-                        </div>
-
-                        {/* Card 2: Why Numerology? */}
-                        <div className="vedic-card-light p-8 md:p-10 relative overflow-hidden group shadow-[0_4px_15px_rgba(201,162,39,0.1)] md:shadow-none hover:shadow-[0_4px_20px_rgba(201,162,39,0.3)] transition-all duration-300 border border-[rgba(201,162,39,0.15)] md:border-transparent">
-                            {/* Background accent */}
-                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[rgba(201,162,39,0.15)] rounded-full blur-3xl -ml-10 -mb-10"></div>
-
-                            <h3 className="heading-vedic text-2xl md:text-3xl font-bold text-maroon mb-6 text-center">
-                                Why Numerology?
-                            </h3>
-                            <p className="text-[var(--text-muted-dark)] leading-relaxed text-sm md:text-base text-left md:text-justify">
-                                Once you learn how to use numerology successfully and implement it in your daily life you will soon see how it can guide you on a path to personal fulfillment and enjoyment. Numerology can be used to find a compatible partner, choose a career, determine your destiny and allows for full advantage of lucky days, events and years.
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </section >
+
 
             {/* Stats Counter */}
             < section ref={statsRef} className="bg-section-dark py-12 md:py-14 px-4" >
@@ -736,9 +723,9 @@ const LandingPage = () => {
                         </div>
                         <div className="scroll-animate" style={{ opacity: 0 }}>
                             <div className="text-3xl md:text-5xl font-bold text-gold font-heading mb-2">
-                                {counts.languages}
+                                Multi
                             </div>
-                            <p className="text-[var(--text-muted-light)] text-xs md:text-sm">Languages Supported</p>
+                            <p className="text-[var(--text-muted-light)] text-xs md:text-sm">Language Support</p>
                         </div>
                     </div>
                 </div>
@@ -759,126 +746,36 @@ const LandingPage = () => {
                         </p>
                     </div>
 
-                    <div className="hidden md:grid md:grid-cols-2 gap-6">
-                        {testimonials.map((t, index) => (
-                            <div
-                                key={index}
-                                className="scroll-animate bg-white rounded-2xl p-6 md:p-8 border border-[rgba(107,45,45,0.08)] shadow-sm hover:shadow-[0_8px_30px_rgba(201,162,39,0.12)] transition-all duration-500 hover:-translate-y-1 relative group"
-                                style={{ opacity: 0 }}
-                            >
-                                {/* Quote mark */}
-                                <div className="absolute top-4 right-6 text-6xl text-[rgba(201,162,39,0.1)] font-serif leading-none select-none pointer-events-none group-hover:text-[rgba(201,162,39,0.2)] transition-colors duration-500">"</div>
-
-                                {/* Stars */}
-                                <div className="flex gap-1 mb-4 text-[var(--color-gold)]">
-                                    {[...Array(5)].map((_, i) => (
-                                        <span key={i} className={`text-lg ${i < t.rating ? '' : 'opacity-25'}`}>★</span>
-                                    ))}
-                                </div>
-
-                                {/* Text */}
-                                <p className="text-[var(--text-muted-dark)] text-sm leading-relaxed mb-6 italic">
-                                    "{t.text}"
-                                </p>
-
-                                {/* Author */}
-                                <div className="flex items-center gap-3 border-t border-[rgba(107,45,45,0.06)] pt-4">
-                                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-maroon)] to-[rgba(107,45,45,0.8)] flex items-center justify-center text-gold font-bold text-sm">
-                                        {t.name.charAt(0)}
-                                    </div>
-                                    <div>
-                                        <p className="font-semibold text-maroon text-sm">{t.name}</p>
-                                        <p className="text-[var(--text-muted-dark)] text-xs">{t.location}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Mobile Carousel */}
-                    <div className="md:hidden">
-                        <div className="relative min-h-[400px] overflow-hidden">
-                            {testimonials.map((t, index) => {
-                                let positionClass = '';
-                                if (index === activeTestimonial)
-                                    positionClass = 'opacity-100 translate-y-0 scale-100 z-20';
-                                else if (index === (activeTestimonial + 1) % testimonials.length)
-                                    positionClass = 'opacity-60 translate-y-12 scale-90 z-10';
-                                else if (index === (activeTestimonial - 1 + testimonials.length) % testimonials.length)
-                                    positionClass = 'opacity-0 -translate-y-24 scale-100 z-0';
-                                else
-                                    positionClass = 'opacity-0 translate-y-full scale-90 z-0';
-
-                                return (
-                                    <div
-                                        key={index}
-                                        className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${positionClass}`}
-                                    >
-                                        <div className={`bg-white rounded-2xl p-6 border border-[rgba(107,45,45,0.08)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] h-full flex flex-col justify-between ${index === activeTestimonial ? 'shadow-[0_8px_30px_rgba(201,162,39,0.15)]' : ''}`}>
-                                            <div>
-                                                {/* Quote mark */}
-                                                <div className="absolute top-4 right-6 text-6xl text-[rgba(201,162,39,0.1)] font-serif leading-none select-none pointer-events-none">"</div>
-
-                                                {/* Stars */}
-                                                <div className="flex gap-1 mb-4 text-[var(--color-gold)]">
-                                                    {[...Array(5)].map((_, i) => (
-                                                        <span key={i} className={`text-lg ${i < t.rating ? '' : 'opacity-25'}`}>★</span>
-                                                    ))}
-                                                </div>
-
-                                                {/* Text */}
-                                                <p className="text-[var(--text-muted-dark)] text-sm leading-relaxed mb-6 italic">
-                                                    "{t.text}"
-                                                </p>
-                                            </div>
-
-                                            {/* Author */}
-                                            <div className="flex items-center gap-3 border-t border-[rgba(107,45,45,0.06)] pt-4">
-                                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-maroon)] to-[rgba(107,45,45,0.8)] flex items-center justify-center text-gold font-bold text-sm">
-                                                    {t.name.charAt(0)}
-                                                </div>
-                                                <div>
-                                                    <p className="font-semibold text-maroon text-sm">{t.name}</p>
-                                                    <p className="text-[var(--text-muted-dark)] text-xs">{t.location}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-
-                        {/* Prev / Next + Dots row */}
-                        <div className="flex items-center justify-center gap-4 mt-6">
-                            {/* Prev */}
-                            <button
-                                onClick={() => setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-                                className="w-9 h-9 rounded-full border border-[rgba(201,162,39,0.5)] flex items-center justify-center text-gold hover:bg-[rgba(201,162,39,0.1)] transition-colors duration-200"
-                                aria-label="Previous testimonial"
-                            >
-                                ‹
-                            </button>
-
-                            {/* Dot indicators */}
-                            <div className="flex items-center gap-2">
-                                {testimonials.map((_, i) => (
-                                    <button
-                                        key={i}
-                                        onClick={() => setActiveTestimonial(i)}
-                                        className={`h-1.5 rounded-full transition-all duration-300 ${i === activeTestimonial ? 'w-6 bg-gold' : 'w-1.5 bg-[rgba(201,162,39,0.3)]'}`}
-                                        aria-label={`Go to testimonial ${i + 1}`}
+                    <div className="relative w-full mt-4">
+                        <div className="flex gap-4 md:gap-6 w-max animate-marquee-cards">
+                            {[
+                                '/images/whatsapp/w1.png',
+                                '/images/whatsapp/w2.png',
+                                '/images/whatsapp/w3.png',
+                                '/images/whatsapp/w4.png',
+                                '/images/whatsapp/w5.png',
+                                '/images/whatsapp/w6.png',
+                                '/images/whatsapp/w7.png',
+                                /* duplicate for seamless loop */
+                                '/images/whatsapp/w1.png',
+                                '/images/whatsapp/w2.png',
+                                '/images/whatsapp/w3.png',
+                                '/images/whatsapp/w4.png',
+                                '/images/whatsapp/w5.png',
+                                '/images/whatsapp/w6.png',
+                                '/images/whatsapp/w7.png',
+                            ].map((src, index) => (
+                                <div
+                                    key={index}
+                                    className="flex-shrink-0 w-64 md:w-80 scroll-animate bg-white rounded-2xl p-2 border border-[rgba(107,45,45,0.08)] shadow-sm hover:shadow-[0_12px_30px_rgba(201,162,39,0.15)] transition-all duration-500 hover:-translate-y-1 relative group"
+                                >
+                                    <img
+                                        src={src}
+                                        alt={`WhatsApp Testimonial ${index + 1}`}
+                                        className="w-full h-auto rounded-xl object-contain mix-blend-multiply"
                                     />
-                                ))}
-                            </div>
-
-                            {/* Next */}
-                            <button
-                                onClick={() => setActiveTestimonial((prev) => (prev + 1) % testimonials.length)}
-                                className="w-9 h-9 rounded-full border border-[rgba(201,162,39,0.5)] flex items-center justify-center text-gold hover:bg-[rgba(201,162,39,0.1)] transition-colors duration-200"
-                                aria-label="Next testimonial"
-                            >
-                                ›
-                            </button>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -922,16 +819,16 @@ const LandingPage = () => {
                                 <p className="text-gold font-semibold text-sm mb-4 font-heading">WHAT'S INCLUDED:</p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     {[
-                                        'Life Path & Destiny Number Analysis',
-                                        'Ruling Planet & Personality Traits',
-                                        'Career & Financial Guidance',
-                                        'Health & Wellness Insights',
-                                        'Relationship Compatibility',
-                                        'Karmic Debt & Lessons',
-                                        'Lucky Numbers, Colors & Days',
-                                        'Yearly Forecast & Predictions',
-                                        'Remedies & Gemstone Suggestions',
-                                        'Multi-Language PDF Report'
+                                        'Love and Relationship Compatibility',
+                                        'Money and Career Guidance',
+                                        'Health and Wellness Insights',
+                                        'Potential and Challenges Analysis',
+                                        'Innate Talents & Hidden Abilities',
+                                        'Core Numbers (Life Path & Destiny)',
+                                        'Personality & Expression Numbers',
+                                        'Soul Urge & Subconscious Self',
+                                        'Lo Shu Grid (Magical & Chinese)',
+                                        'Your Future Forecast & Predictions'
                                     ].map((feature, i) => (
                                         <div key={i} className="flex items-center gap-2 text-sm">
                                             <span className="text-gold flex-shrink-0">✓</span>
@@ -947,23 +844,87 @@ const LandingPage = () => {
                             <span className="text-[var(--text-muted-light)] text-xs flex items-center gap-1.5">🔒 Secure Payment</span>
                             <span className="text-[var(--text-muted-light)] text-xs flex items-center gap-1.5">⚡ Instant Delivery</span>
                             <span className="text-[var(--text-muted-light)] text-xs flex items-center gap-1.5">📄 PDF Download</span>
-                            <span className="text-[var(--text-muted-light)] text-xs flex items-center gap-1.5">🌐 3 Languages</span>
+                            <span className="text-[var(--text-muted-light)] text-xs flex items-center gap-1.5">🌐 Multi-Language</span>
                         </div>
                     </div>
                 </div>
             </section >
 
-            {/* Sample Report Preview */}
-            < section className="bg-cream py-20 px-4" >
+            {/* Report Contents Detail Section */}
+            <section className="bg-cream py-20 px-4">
                 <div className="container-main max-w-4xl">
                     <div className="text-center mb-14 scroll-animate" style={{ opacity: 0 }}>
                         <h2 className="heading-vedic text-3xl md:text-4xl font-bold text-maroon mb-3">
+                            Comprehensive <span className="text-gold">Report Contents</span>
+                        </h2>
+                        <div className="divider-vedic">
+                            <span className="text-gold">❖</span>
+                        </div>
+                        <p className="text-[var(--text-muted-dark)] mt-4 max-w-2xl mx-auto text-sm">
+                            A detailed breakdown of everything you will discover in your 100+ page personalized numerology reading.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {[
+                            { title: "Your Core Numbers", desc: "These are the main numbers that shape who you are. They come from your birth date and name." },
+                            { title: "Life Path Number", desc: "This number shows your main purpose in life. It's based on your birth date." },
+                            { title: "The Day You Were Born", desc: "Find out about your personality based on the day you were born." },
+                            { title: "The Magical Lo Shu Grid", desc: "An old number system that shows balance and energy in your life." },
+                            { title: "Your Chinese Lo Shu Grid", desc: "See how this Chinese number square applies to your personal numbers." },
+                            { title: "Western phenomenon of Lo Shu Grid", desc: "Learn how Western numerology uses this Eastern concept." },
+                            { title: "Love and Relationship", desc: "Learn how numbers affect your love life and how you connect with others." },
+                            { title: "Potential and Challenges", desc: "Find out what you're good at and what might be hard for you, based on your numbers." },
+                            { title: "Money and Career", desc: "See how your numbers are tied to work and money in your life." },
+                            { title: "Your Health", desc: "Learn how your numbers might be linked to your body and mind." },
+                            { title: "Your Talent", desc: "Learn about the innate skills and hidden abilities revealed by your numbers." },
+                            { title: "Your Personality Number", desc: "Learn about how others see you based on your numbers." },
+                            { title: "Your Expression Number", desc: "Discover your skills and talents through this number." },
+                            { title: "Your Soul Urge Number", desc: "Find out what drives you deep down inside." },
+                            { title: "Your Subconscious Self Number", desc: "See the hidden parts of yourself through this number." },
+                            { title: "Your Challenge Number", desc: "Learn about the obstacles you might face in life." },
+                            { title: "Your Destiny Number", desc: "Understand the big goals you're meant to reach." },
+                            { title: "Your Future Forecast", desc: "Get a peek at what might be coming up for you, based on your numbers." }
+                        ].map((item, i) => (
+                            <div key={i} className="scroll-animate relative bg-white/70 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-[rgba(201,162,39,0.2)] shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(201,162,39,0.25)] hover:-translate-y-3 hover:border-[rgba(201,162,39,0.8)] hover:bg-white/90 transition-all duration-500 overflow-hidden group cursor-pointer" style={{ opacity: 0 }}>
+                                {/* Decorative top gradient edge */}
+                                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-[rgba(201,162,39,0.6)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                                {/* Watermark Number */}
+                                <div className="absolute -right-2 -bottom-4 text-[9rem] font-serif font-bold text-[rgba(201,162,39,0.06)] leading-none select-none pointer-events-none group-hover:text-[rgba(201,162,39,0.18)] group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-700 z-0 drop-shadow-sm group-hover:drop-shadow-md">
+                                    {(i + 1).toString().padStart(2, '0')}
+                                </div>
+
+                                <div className="relative z-10 flex flex-col h-full">
+                                    <div className="w-12 h-12 mb-5 rounded-full bg-gradient-to-br from-[var(--color-cream)] to-white flex items-center justify-center border border-[rgba(201,162,39,0.3)] shadow-[0_2px_10px_rgba(0,0,0,0.05)] group-hover:bg-[rgba(201,162,39,0.15)] group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_0_20px_rgba(201,162,39,0.4)] transition-all duration-500">
+                                        <span className="text-gold text-xl drop-shadow-md">✧</span>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-maroon font-heading mb-3 group-hover:text-gold transition-colors duration-300 drop-shadow-sm">{item.title}</h3>
+                                    <p className="text-[var(--text-muted-dark)] text-sm leading-relaxed mt-auto relative z-10 font-medium group-hover:text-maroon transition-colors duration-300">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-16 text-center scroll-animate" style={{ opacity: 0 }}>
+                        <button onClick={() => navigate('/numerology-form')} className="btn-gold">
+                            Unlock Your Full Report
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Sample Report Preview */}
+            < section className="bg-section-dark py-20 px-4" >
+                <div className="container-main max-w-4xl">
+                    <div className="text-center mb-14 scroll-animate" style={{ opacity: 0 }}>
+                        <h2 className="heading-vedic text-3xl md:text-4xl font-bold text-[var(--color-cream)] mb-3">
                             Sample <span className="text-gold">Report Preview</span>
                         </h2>
                         <div className="divider-vedic">
                             <span className="text-gold">❖</span>
                         </div>
-                        <p className="text-[var(--text-muted-dark)] mt-4 max-w-lg mx-auto text-sm">
+                        <p className="text-[var(--text-muted-light)] mt-4 max-w-lg mx-auto text-sm">
                             Here's a glimpse of what your personalized Professional Numerology report looks like
                         </p>
                     </div>
@@ -1023,10 +984,10 @@ const LandingPage = () => {
             </section >
 
             {/* FAQs */}
-            < section id="faq" className="bg-section-dark py-20 px-4" >
+            < section id="faq" className="bg-cream py-20 px-4" >
                 <div className="container-main max-w-4xl">
                     <div className="text-center mb-12">
-                        <h2 className="heading-vedic text-3xl font-bold text-[var(--color-cream)] mb-3">
+                        <h2 className="heading-vedic text-3xl font-bold text-maroon mb-3">
                             Frequently Asked Questions
                         </h2>
                         <div className="divider-vedic">
@@ -1039,8 +1000,8 @@ const LandingPage = () => {
                             <div
                                 key={index}
                                 className={`rounded-xl overflow-hidden transition-all duration-500 border ${openFaq === index
-                                    ? 'bg-[rgba(201,162,39,0.08)] border-[rgba(201,162,39,0.35)] shadow-[0_4px_20px_rgba(201,162,39,0.1)]'
-                                    : 'bg-[rgba(255,255,255,0.03)] border-[rgba(201,162,39,0.12)] hover:bg-[rgba(255,255,255,0.06)] hover:border-[rgba(201,162,39,0.25)]'
+                                    ? 'bg-[rgba(201,162,39,0.12)] border-[rgba(201,162,39,0.4)] shadow-[0_4px_20px_rgba(201,162,39,0.15)]'
+                                    : 'bg-white/70 border-[rgba(201,162,39,0.15)] hover:bg-white hover:border-[rgba(201,162,39,0.3)]'
                                     }`}
                                 style={{ animationDelay: `${index * 80}ms` }}
                             >
@@ -1051,7 +1012,7 @@ const LandingPage = () => {
                                     <div className="flex items-center gap-3">
                                         <span className={`inline-block w-1.5 h-1.5 rounded-full transition-all duration-500 ${openFaq === index ? 'bg-[var(--color-gold)] scale-150 shadow-[0_0_8px_rgba(201,162,39,0.5)]' : 'bg-[rgba(201,162,39,0.4)]'
                                             }`}></span>
-                                        <span className={`heading-vedic text-sm font-medium transition-colors duration-300 ${openFaq === index ? 'text-gold' : 'text-[var(--color-cream)] group-hover:text-gold'
+                                        <span className={`heading-vedic text-sm font-medium transition-colors duration-300 ${openFaq === index ? 'text-gold' : 'text-maroon group-hover:text-gold'
                                             }`}>{faq.question}</span>
                                     </div>
                                     <span className={`text-gold text-xl font-light transition-all duration-500 flex-shrink-0 ml-4 ${openFaq === index ? 'rotate-45 scale-125' : 'rotate-0 group-hover:rotate-90'
@@ -1068,7 +1029,7 @@ const LandingPage = () => {
                                 >
                                     <div className="px-5 pb-5 pl-9">
                                         <div className="border-t border-[rgba(201,162,39,0.15)] pt-4">
-                                            <p className="text-[var(--text-muted-light)] text-sm leading-relaxed">
+                                            <p className="text-[var(--text-muted-dark)] text-sm leading-relaxed">
                                                 {faq.answer}
                                             </p>
                                         </div>
@@ -1081,12 +1042,12 @@ const LandingPage = () => {
             </section >
 
             {/* CTA Section */}
-            < section className="bg-cream py-16 px-4 text-center" >
+            < section className="bg-section-dark py-16 px-4 text-center" >
                 <div className="container-main">
-                    <h2 className="heading-vedic text-2xl md:text-3xl font-bold text-maroon mb-4">
+                    <h2 className="heading-vedic text-2xl md:text-3xl font-bold text-[var(--color-cream)] mb-4">
                         Ready to Discover Your Numbers?
                     </h2>
-                    <p className="text-[var(--text-muted-dark)] mb-8 max-w-xl mx-auto">
+                    <p className="text-[var(--text-muted-light)] mb-8 max-w-xl mx-auto">
                         Begin your journey into the ancient wisdom of Vedic Numerology today.
                     </p>
                     <button onClick={() => navigate('/numerology-form')} className="btn-gold">
